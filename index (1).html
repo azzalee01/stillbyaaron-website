@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Still by Aaron</title>
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --text: #f5f5f5;
+      --muted: #bdbdbd;
+      --line: rgba(255,255,255,0.14);
+      --card: rgba(255,255,255,0.04);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a 0%, #0b0b0b 55%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 22px 56px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 0 28px;
+    }
+    .brand {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+    .hero {
+      padding: 84px 0 72px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    h1 {
+      font-size: clamp(42px, 8vw, 92px);
+      line-height: 0.95;
+      margin: 0 0 18px;
+      letter-spacing: -0.04em;
+      max-width: 900px;
+    }
+    .sub {
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 30px;
+    }
+    .btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 13px 18px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 999px;
+      background: var(--card);
+      backdrop-filter: blur(8px);
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 36px 0 0;
+    }
+    .card {
+      min-height: 260px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    }
+    .eyebrow {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+    footer {
+      padding-top: 36px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 820px) {
+      .grid { grid-template-columns: 1fr; }
+      header { flex-direction: column; align-items: flex-start; }
+      nav a { margin: 0 14px 0 0; }
+      .hero { padding: 60px 0; }
+      .sub { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Still by Aaron</div>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Automotive imagery with restraint, atmosphere, and edge.</h1>
+      <p class="sub">
+        A simple one-file website that will render correctly on GitHub Pages. Replace this text and the section titles with your own content once it is live.
+      </p>
+      <div class="btns">
+        <a class="btn" href="#work">View Work</a>
+        <a class="btn" href="mailto:hello@example.com">Contact</a>
+      </div>
+
+      <div class="grid" id="work">
+        <article class="card">
+          <div class="eyebrow">01</div>
+          <h2>Editorial</h2>
+          <p>Clean, cinematic visual work built around shape, reflection, and mood.</p>
+        </article>
+        <article class="card">
+          <div class="eyebrow">02</div>
+          <h2>Prints</h2>
+          <p>Curated automotive stills designed to feel more like gallery pieces than content.</p>
+        </article>
+        <article class="card">
+          <div class="eyebrow">03</div>
+          <h2>Concepts</h2>
+          <p>Experimental ideas that blend design, humour, and luxury into a recognisable visual style.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer id="about">
+      <p>About: Replace this with your own bio.</p>
+      <p id="contact">Contact: hello@example.com</p>
+    </footer>
+  </div>
+</body>
+</html>
